@@ -1,4 +1,5 @@
 import { useState } from "react";
+import avatar from "../Mahir_Bajole-Picsart-AiImageEnhancer.png";
 
 const GH = "https://github.com/Mahir-Bajole";
 const LINKEDIN = "https://www.linkedin.com/in/mahir-bajole-5a183a32b/";
@@ -149,6 +150,8 @@ const css = `
 .pf html{scroll-behavior:smooth}
 .wrap{max-width:1080px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:80px}
 .side{position:sticky;top:72px;align-self:start}
+.avatar{display:block;width:150px;height:150px;object-fit:cover;border-radius:50%;
+  border:1px solid var(--rule);background:var(--surface);margin-bottom:22px}
 .side h1{font:600 38px/1.1 'Newsreader',Georgia,serif;letter-spacing:-.015em}
 .role{margin-top:10px;font-weight:500}
 .where{margin-top:4px;color:var(--muted);font-size:14.5px}
@@ -166,6 +169,9 @@ section{scroll-margin-top:48px}
 section+section{margin-top:72px}
 section>h2{font:600 26px/1.2 'Newsreader',Georgia,serif;letter-spacing:-.01em;padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:8px}
 .lead{font-size:18px;line-height:1.6;max-width:62ch}
+.about{margin-top:18px;max-width:62ch;display:grid;gap:14px}
+.about p{color:var(--muted);font-size:16px;line-height:1.65}
+.about p:last-child{color:var(--ink)}
 .item{padding:22px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 24px}
 .date{font-size:14px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
 .title{font-weight:600;font-size:17px}
@@ -258,6 +264,7 @@ export default function Portfolio() {
       <style>{css}</style>
       <div className="wrap">
         <header className="side">
+          <img className="avatar" src={avatar} alt="Mahir Bajole" />
           <h1>Mahir Bajole</h1>
           <p className="role">Backend Engineer</p>
           <p className="where">Amravati, Maharashtra, India</p>
@@ -280,6 +287,33 @@ export default function Portfolio() {
               I build event-driven, distributed systems in Java and Spring Boot. I like problems where
               data must stay correct under load: ledgers, reservations and audit trails.
             </p>
+            <div className="about">
+              <p>
+                I'm a final-year B.Tech CSE student at Walchand College of Engineering, Sangli
+                (CGPA 9.10/10), following a Diploma in CSE from Government Polytechnic College,
+                Amravati (93.71%). My backend work covers microservices, serverless functions and
+                event-driven pipelines — Spring Boot, Kafka for messaging, Redis for caching, and
+                PostgreSQL and MongoDB for storage, deployed with Docker on AWS.
+              </p>
+              <p>
+                During my SDE internship at EVArc eMobility I built the ledger and reconciliation
+                module: an append-only, tamper-proof MongoDB ledger processed on AWS Lambda, with REST
+                APIs for queries, reconciliation status and discrepancy reports. My flagship project is
+                a ticket booking platform where optimistic locking and Redis caching guarantee seats
+                are never double-booked, with JWT-based RBAC and asynchronous payment updates over
+                Kafka topics.
+              </p>
+              <p>
+                Beyond the backend, I've built a multilingual snake-bite emergency app powered by a CNN
+                that identifies 20+ species with 95% accuracy, and an IoT smart vehicle safety system
+                that won 1st prize at a state-level project competition. As Technical Head of WCE
+                ACSES I also run expert talks, technical workshops and coding competitions.
+              </p>
+              <p>
+                I'm currently open to backend and SDE roles and internships — scroll down for the full
+                story, or <a href={"mailto:" + EMAIL}>get in touch</a>.
+              </p>
+            </div>
           </section>
 
           <section id="projects" aria-labelledby="h-projects">
