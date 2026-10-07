@@ -172,7 +172,6 @@ section>h2{font:600 26px/1.2 'Newsreader',Georgia,serif;letter-spacing:-.01em;pa
 .lead{font-size:18px;line-height:1.6;max-width:62ch;text-align:justify;hyphens:auto}
 .about{margin-top:18px;max-width:62ch;display:grid;gap:14px}
 .about p{color:var(--muted);font-size:16px;line-height:1.65;text-align:justify;hyphens:auto}
-.about p:last-child{color:var(--ink)}
 .item{padding:22px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 24px}
 .date{font-size:14px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
 .title{font-weight:600;font-size:17px}
@@ -284,11 +283,11 @@ export default function Portfolio() {
 
         <main>
           <section aria-labelledby="about">
-            <p className="lead">
-              I build event-driven, distributed systems in Java and Spring Boot. I like problems where
-              data must stay correct under load: ledgers, reservations and audit trails.
-            </p>
             <div className="about">
+              <p>
+                I build event-driven, distributed systems in Java and Spring Boot. I like problems where
+                data must stay correct under load: ledgers, reservations and audit trails.
+              </p>
               <p>
                 I'm a final-year B.Tech CSE student at Walchand College of Engineering, Sangli
                 (CGPA 9.10/10), following a Diploma in CSE from Government Polytechnic College,
