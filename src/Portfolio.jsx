@@ -151,8 +151,9 @@ const css = `
 .wrap{max-width:1080px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:80px}
 .side{position:sticky;top:72px;align-self:start}
 .avatar{display:block;width:150px;height:150px;object-fit:cover;border-radius:50%;
-  border:1px solid var(--rule);background:var(--surface);margin-bottom:22px}
+  border:1px solid var(--rule);background:var(--surface);margin:0 auto 22px}
 .side h1{font:600 38px/1.1 'Newsreader',Georgia,serif;letter-spacing:-.015em}
+.side h1,.role,.where{text-align:center}
 .role{margin-top:10px;font-weight:500}
 .where{margin-top:4px;color:var(--muted);font-size:14.5px}
 .bio{margin-top:20px;color:var(--muted);font-size:15px}
@@ -168,9 +169,9 @@ const css = `
 section{scroll-margin-top:48px}
 section+section{margin-top:72px}
 section>h2{font:600 26px/1.2 'Newsreader',Georgia,serif;letter-spacing:-.01em;padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:8px}
-.lead{font-size:18px;line-height:1.6;max-width:62ch}
+.lead{font-size:18px;line-height:1.6;max-width:62ch;text-align:justify;hyphens:auto}
 .about{margin-top:18px;max-width:62ch;display:grid;gap:14px}
-.about p{color:var(--muted);font-size:16px;line-height:1.65}
+.about p{color:var(--muted);font-size:16px;line-height:1.65;text-align:justify;hyphens:auto}
 .about p:last-child{color:var(--ink)}
 .item{padding:22px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 24px}
 .date{font-size:14px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
